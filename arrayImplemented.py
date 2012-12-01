@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-arrayImplemented.py
-
-Created by versorge on 2012-11-23.
-"""
-
 from array import Array
 
 # Create an array for the counters and initialize each element to 0.

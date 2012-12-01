@@ -1,18 +1,19 @@
 from array import Array2D
 
 # Open the txt file for reading
-gradeFile = open(filename, "r")
+gradeFile = open('studentScores.txt', "r")
 
 # Extract the first 2 values which indicate the size of the array
-numExams = int(gradeFile.readline())
 numStudents = int(gradeFile.readline())    
+numExams = int(gradeFile.readline()) 
 
-# Create the 2-D array to store the grades
+# Create the 2-D array to store the grades 
+
 examGrades = Array2D(numStudents,numExams)
 
 # Extract the grades from the remaining lines
 i = 0
-for students in gradeFile:
+for student in gradeFile:
 	grades = student.split()
 	for j in range(numExams):
 		examGrades[i,j] = int(grades[j])
