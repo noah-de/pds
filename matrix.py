@@ -46,10 +46,17 @@ class Matrix:
 
 	# Creates a new matrix that results from matrix subtraction
 	def __sub__(self, rhsMatrix):
-		pass
+		assert_matrix_compatability(self, rhsMatrix)
+		# Create the new matrix
+		newMatrix = Matrix(self.numRows(), self.numCols())
+		# Add the corresponding elements in the two matrices
+		for r in range(self.numRows()):
+			for c in range(self.numCols()):
+				newMatrix[r,c] = self[r,c] - rhsMatrix[r,c]
+		return newMatrix
 
 	# Creates and returns a new matrix resulting from matrix multiplication
-	def __mul___(self, rhsMatrix):
+	def __mul__(self, rhsMatrix):
 		pass
 
 	def assert_matrix_compatability(thisMatrix, thatMatrix):
