@@ -1,4 +1,4 @@
-# Implementation of the MatricADT using 2-D array
+# Implementation of the MatrixADT using 2-D array
 from array import Array2D
 
 class Matrix:
@@ -21,7 +21,7 @@ class Matrix:
 
 	# Sets the value of element (i,j) to the value s
 	def __getitem__(self, ndxTuple, s):
-		self._theGrid(ndxTuple[0], ndxTuple[1]) = s
+		self._theGrid[ndxTuple[0], ndxTuple[1]] = scalar
 
 	# Scales the matrix by the given scalar
 	def scaleBy(self, scalar):
@@ -32,9 +32,9 @@ class Matrix:
 	# Creates and returns a new matrix that is the transpose of this matrix
 	def transpose(self):
 		pass
-		
+  
     # Creates and returns a new matrix that results from matrix addition
-    def __add__(self, rhsMatrix):
+	def __add__(self, rhsMatrix):
 		assert_matrix_compatability(self, rhsMatrix)
 		# Create the new matrix
 		newMatrix = Matrix(self.numRows(), self.numCols())

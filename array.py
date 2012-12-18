@@ -63,6 +63,7 @@ class Array2D:
 		
 		# Create 2-D arrays for each row of the 2-D array
 		for i in range(numRows):
+			# print i
 			self._theRows[i] = Array(numCols)
 	
 	# Returns the number of rows
@@ -76,7 +77,7 @@ class Array2D:
 	# Clears the array by setting every element to the given value
 	def clear(self, value):
 		for row in range(self.numRows()):
-			row.clear(value)
+			self._theRows[row].clear(value)
 
 	# Gets the contents of the element at position [i,j]
 	def __getitem__(self, ndxTuple):
