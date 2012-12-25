@@ -17,11 +17,11 @@ class Matrix:
 
 	# Returns the value of element (i,j)
 	def __getitem__(self, ndxTuple):
-		return self._theGrid(ndxTuple[0], ndxTuple[1])
+		return self._theGrid[ndxTuple[0], ndxTuple[1]]
 
 	# Sets the value of element (i,j) to the value s
-	def __getitem__(self, ndxTuple, s):
-		self._theGrid[ndxTuple[0], ndxTuple[1]] = scalar
+	def __setitem__(self, ndxTuple, s):
+		self._theGrid[ndxTuple[0], ndxTuple[1]] = s
 
 	# Scales the matrix by the given scalar
 	def scaleBy(self, scalar):
@@ -32,6 +32,7 @@ class Matrix:
 	# Creates and returns a new matrix that is the transpose of this matrix
 	def transpose(self):
 		pass
+		newMatrix = Matrix(self.numRows(), self.numCols())
   
     # Creates and returns a new matrix that results from matrix addition
 	def __add__(self, rhsMatrix):

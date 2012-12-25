@@ -21,7 +21,7 @@ class Array:
 		#print chr(index)
 		assert index >= 0 and index < len(self), "Array subscript out of range: "+ord(index)
 		return self._elements[index]
-	
+
 	def __setitem__(self, index, value):
 		assert index >= 0 and index < len(self), "Array subscript out of range: "+ chr(index)
 		self._elements[index] = value
@@ -87,7 +87,7 @@ class Array2D:
 		assert row >=0 and row < self.numRows() and col >= 0 and col < self.numCols(), "Array subscript out of range"
 		the1dArray = self._theRows[row]
 		return the1dArray[col]
-		
+
 	# Sets the contents of the element at position [i,j] to the value
 	def __setitem__(self, ndxTuple, value):
 		assert len(ndxTuple) == 2, "Invalid array subscript"
